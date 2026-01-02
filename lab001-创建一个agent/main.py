@@ -11,7 +11,7 @@ def get_weather(city: str) -> str:
 
 # 创建带代理的模型
 llm = ChatOpenAI(
-    model="gpt-4o-mini",
+    model=os.getenv("MODEL"),
     temperature=0,
     api_key=os.getenv("OPENAI_API_KEY"),
     # 使用国内代理服务（示例，需替换为实际可用的）
